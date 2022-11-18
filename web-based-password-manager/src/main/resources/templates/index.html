@@ -2,33 +2,89 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
-    <link rel="stylesheet" href="assets/libs/css/style.css">
-    <title>Password Manager</title>
+
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<!-- Here in bootstrap css the order is important -->
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet"
+	href="assets/vendor/bootstrap/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+	href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+<link rel="stylesheet" href="assets/libs/css/style.css">
+
+<title>Password Manager</title>
 </head>
 
 <body>
-    <!-- start main wrapper -->
-    <div class="dashboard-main-wrapper">
-    <!-- start title -->
-        <div class="dashboard-header">
+	<!-- start main wrapper -->
+	<div class="dashboard-main-wrapper">
+		<!-- start title -->
+		<div class="dashboard-header">
 
-            <nav class="navbar navbar-expand-lg bg-white fixed-top">
-              <a class="navbar-brand" href="#">
-                <i class="fa fa-lock" aria-hidden="true"></i>
-              </a>
-                <a class="navbar-brand" href="#">Password Manager&nbsp</a>
-            </nav>
-        </div>
-     <!-- end title -->
-    
-    </div>
-    <!-- end main wrapper  -->
+			<nav class="navbar navbar-expand-lg bg-white fixed-top">
+				<a class="navbar-brand" href="#"> <i class="fa fa-lock"
+					aria-hidden="true"></i>
+				</a> <a class="navbar-brand" href="#">Password Manager&nbsp</a>
+			</nav>
+		</div>
+
+		<div class="dashboard-wrapper">
+			<div class="container-fluid dashboard-content ">
+				<div class="card-body" align="right">
+					<a href="generatePassword.html" target="_parent"><h4><b>Generate New Passwords</b></h4></a>
+				</div>
+				<div class="card-body border-top" align="center">
+					<div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+						<div class="card">	
+							<div class="card-body p-0">
+								<div class="table-responsive">
+									<table class="table">
+										<thead class="bg-light">
+											<tr class="border-0">
+												<th class="border-0">Website Name</th>
+												<th class="border-0">Password</th>
+												<th class="border-0">IsBlocked?</th>
+												<th class="border-0">Action</th>
+											</tr>
+										</thead>
+										<tbody>
+											<div>
+												<tr>
+													<td>Website1</td>
+													<td>Pass1</td>
+													<td>N</td>
+													<td>
+														<div>
+															<a> <span class="glyphicon glyphicon-edit"></span>
+															</a> | <a> <span class="glyphicon glyphicon-remove"></span>
+															</a>
+														</div>
+													</td>
+												</tr>
+											</div>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!-- end title -->
+
+	</div>
+	</div>
+	<!-- end main wrapper  -->
 </body>
 
 </html>
