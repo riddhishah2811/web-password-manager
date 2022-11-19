@@ -1,4 +1,4 @@
-package com.weshopify.platform;
+package com.wpm.platform;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
