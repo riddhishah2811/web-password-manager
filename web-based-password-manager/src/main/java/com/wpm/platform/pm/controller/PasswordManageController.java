@@ -1,10 +1,14 @@
 package com.wpm.platform.pm.controller;
 
+import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -39,6 +43,16 @@ public class PasswordManageController {
 		log.info("Model Data :"+ model.getAttribute("wpmBean").toString());
 		log.info("I'm generated Pass API");
 		return "generatePassword";
+	}
+	
+	@RequestMapping("/")
+	public String viewData(Model model)
+	{
+		log.info("In A View WPM page!");
+		List<PasswordManage> pmList1=passwordManageService.getAllData();
+		model.addAttribute("pmList1", pmList1);
+		System.out.println("In API : "+pmList1);
+		return "index";
 	}
 	
 }

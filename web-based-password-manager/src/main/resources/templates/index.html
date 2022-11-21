@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
 
 <!-- Required meta tags -->
-<meta charset="utf-8">
+<meta charset="ISO-8859-1">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -56,9 +56,9 @@
 										</thead>
 										<tbody>
 											<div>
-												<tr>
-													<td>Website1</td>
-													<td>Pass1</td>
+												<tr th:each="pm:${pmList1}">
+													<td th:text="${pm.wname}"></td>
+													<td th:text="${pm.password}"></td>
 													<td>N</td>
 													<td>
 														<div>
