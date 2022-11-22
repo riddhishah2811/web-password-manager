@@ -34,19 +34,30 @@ public class PasswordManageController {
 		return "generatePassword";
 	}
 
-	@RequestMapping(value = "/passord-generated")
+	@RequestMapping(value = "/passord-generated-view",method=RequestMethod.POST,params="action=getPass")
 	public String generatePass(@ModelAttribute("wpmBean") PasswordManage passwordManage,Model model)
 	{
 		model.addAttribute("password",passwordManage.getPassword());
 		passwordManageService.savePassword(passwordManage);
+		model.addAttribute("generatedPass",passwordManage.getPassword());
 		log.info("PasswordManage Form Data : "+ passwordManage.toString());
 		log.info("Model Data :"+ model.getAttribute("wpmBean").toString());
 		log.info("I'm generated Pass API");
 		return "generatePassword";
 	}
 	
-	@RequestMapping("/")
+	@RequestMapping(value={"/passord-generated-view"},method=RequestMethod.POST,params="action=viewPage")
 	public String viewData(Model model)
+	{
+		log.info("In A View WPM page!");
+		List<PasswordManage> pmList1=passwordManageService.getAllData();
+		model.addAttribute("pmList1", pmList1);
+		System.out.println("In API : "+pmList1);
+		return "index";
+	}
+	
+	@RequestMapping(value={"/"},method=RequestMethod.GET)
+	public String viewDataPage(Model model)
 	{
 		log.info("In A View WPM page!");
 		List<PasswordManage> pmList1=passwordManageService.getAllData();
