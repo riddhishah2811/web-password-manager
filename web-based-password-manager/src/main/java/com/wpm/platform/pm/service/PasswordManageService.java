@@ -8,5 +8,6 @@ public interface PasswordManageService {
 	
 	public PasswordManage savePassword(PasswordManage passwordManage);
 	public List<PasswordManage> getAllData();
+	public List<PasswordManage> deleteWebsiteById(int wid);
 
 }

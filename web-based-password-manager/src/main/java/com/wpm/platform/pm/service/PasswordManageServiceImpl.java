@@ -57,5 +57,23 @@ public class PasswordManageServiceImpl implements PasswordManageService{
 		log.info("I am in getAllData() method!" + pmList.toString());
 		return pmList;
 	}
+
+
+	public PasswordManage getWebsiteById(int id) {
+		log.info("I am in get customerById method!");
+		PasswordManage passwordManage= passwordManageRepository.findById(id).get();
+		return passwordManage;
+	}
+	
+	@Override
+	public List<PasswordManage> deleteWebsiteById(int wid) {
+		// TODO Auto-generated method stub
+		PasswordManage passwordManage=getWebsiteById(wid);
+		if(passwordManage!=null)
+		{
+			passwordManageRepository.deleteById(wid);
+		}
+		return getAllData();
+	}
 	
 }
